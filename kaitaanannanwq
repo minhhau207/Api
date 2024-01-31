@@ -5001,7 +5001,7 @@ spawn(function()
         end
     end
     end)
-    LPH_JIT_MAX(function()
+
         task.spawn(function()
             while task.wait() do
                 pcall(function()
@@ -5027,8 +5027,6 @@ spawn(function()
                     end
                 end)
             end
-        end)
-    end)()
     local placeId = game.PlaceId
     if placeId == 2753915549 then
         World1 = true
@@ -6745,17 +6743,16 @@ spawn(function()
         game:GetService'VirtualUser':Button1Down(Vector2.new(1280, 672))
     end
     AttackRandomType = 1
-    LPH_NO_VIRTUALIZE(function()
+
         task.spawn(function()
             while wait() do 
                 AttackRandomType = math.random(1,5)
                 wait(0.3)
             end
         end)
-    end)()
+    end)
     
     _G.RedeemCodeLocalFastAutoFarm = false
-    LPH_JIT_MAX(function()
         function AutoFarmLevel()
             GetQuestTitle = game:GetService("Players").LocalPlayer.PlayerGui.Main.Quest.Container.QuestTitle.Title
             GetQuest = game:GetService("Players").LocalPlayer.PlayerGui.Main.Quest
@@ -7104,11 +7101,9 @@ spawn(function()
                 end
             end
         end
-    end)()
-    
     -- [Check Notification]
     
-    LPH_JIT_MAX(function()
+
         function CheckNotifyComplete()
             for i, v in pairs(game:GetService("Players")["LocalPlayer"].PlayerGui:FindFirstChild("Notifications"):GetChildren()) do
                 if v.Name == "NotificationTemplate" then
@@ -7122,14 +7117,14 @@ spawn(function()
             end
             return false
         end
-    end)()
+
     
     local NoLoopDuplicate = false
     local SubQuest = false
     local oldmob = Name
     local oldcheckquest = NameMon
     
-    LPH_JIT_MAX(function()
+
         task.spawn(function()
             while wait(.1) do
                 pcall(function()
@@ -7176,6 +7171,5 @@ spawn(function()
                 end)
             end
         end)
-    end)()
     
     
